@@ -65,6 +65,11 @@
         </style>
     </head>
     <body>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">about us</a>
+            <a href="/about/about">aboutabouit</a>
+        </div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
