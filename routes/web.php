@@ -25,3 +25,19 @@ Route::get('/about/about', function (){
     return view('aboutabout');
     
 });
+
+Route::get('profile/{id}', function($id) {
+    $lol = \App\User::find($id);
+    $name = $lol->name;
+    $email = $lol->email;
+    
+    $data = [
+        'id' => $id,
+        'vards' => $name,
+        'epasts' => $email,
+        'darbs' => 'Noslēpums',
+        'gadi' => '5'  
+    ];
+    
+    return view('profile', $data);
+});
